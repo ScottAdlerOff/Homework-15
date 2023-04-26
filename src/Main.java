@@ -51,7 +51,6 @@ public class Main {
         for (Gryffindor gryffindor : gryffindors) {
             sum += gryffindor.getApparitionDistance() + gryffindor.getSpellPower();
         }
-        System.out.println(sum);
         return sum;
     }
 }

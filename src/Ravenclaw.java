@@ -5,11 +5,17 @@ public class Ravenclaw extends Hogwarts{
     private int creativity;
     private int spellPower;
     private int apparitionDistance;
+    private int sumSkillRavenclaw;
     public Ravenclaw(String name, int spellPower, int apparitionDistance, int wisdom, int cleverness, int creativity){
         super(name,spellPower,apparitionDistance);
         this.wisdom = wisdom;
         this.cleverness = cleverness;
         this.creativity = creativity;
+        this.sumSkillRavenclaw = spellPower + apparitionDistance + wisdom + cleverness + creativity;
+    }
+
+    public int getSumSkillRavenclaw() {
+        return sumSkillRavenclaw;
     }
 
     public int getCleverness() {
@@ -34,5 +40,12 @@ public class Ravenclaw extends Hogwarts{
 
     public void setCreativity(int creativity) {
         this.creativity = creativity;
+    }
+    public static Ravenclaw compareSkillRavenclaw(Ravenclaw ravenclaw1, Ravenclaw ravenclaw2) {
+        if (ravenclaw1.getSumSkillRavenclaw() > ravenclaw2.getSumSkillRavenclaw()) {
+            return ravenclaw1;
+        } else {
+            return ravenclaw2;
+        }
     }
 }

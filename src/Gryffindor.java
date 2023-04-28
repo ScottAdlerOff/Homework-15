@@ -6,12 +6,14 @@ public class Gryffindor extends Hogwarts {
     private int bravery;
     private int spellPower;
     private int apparitionDistance;
+    private int sumSkillGryffindor;
 
     public Gryffindor(String name, int spellPower, int apparitionDistance, int nobility, int honor, int bravery) {
         super(name, spellPower, apparitionDistance);
         this.nobility = nobility;
         this.honor = honor;
         this.bravery = bravery;
+        this.sumSkillGryffindor = spellPower + apparitionDistance + nobility + honor + bravery;
     }
 
     public int getNobility() {
@@ -26,6 +28,10 @@ public class Gryffindor extends Hogwarts {
         return honor;
     }
 
+    public int getSumSkillGryffindor() {
+        return sumSkillGryffindor;
+    }
+
     public void setHonor(int honor) {
         this.honor = honor;
     }
@@ -37,5 +43,11 @@ public class Gryffindor extends Hogwarts {
     public void setBravery(int bravery) {
         this.bravery = bravery;
     }
-
+    public static Gryffindor compareSkillGryffindor(Gryffindor gryffindor1, Gryffindor gryffindor2) {
+        if (gryffindor1.getSumSkillGryffindor() > gryffindor2.getSumSkillGryffindor()) {
+            return gryffindor1;
+        } else {
+            return gryffindor2;
+        }
+    }
 }

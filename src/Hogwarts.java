@@ -32,4 +32,11 @@ public class Hogwarts {
     public void setApparitionDistance(int apparitionDistance) {
         this.apparitionDistance = apparitionDistance;
     }
+    public static Hogwarts compareSkillHogwarts(Gryffindor gryffindor1, Ravenclaw ravenclaw2) {
+        if (gryffindor1.getSumSkillGryffindor() > ravenclaw2.getSumSkillRavenclaw()) {
+            return gryffindor1;
+        } else {
+            return ravenclaw2;
+        }
+    }
 }

@@ -7,6 +7,7 @@ public class Slytherin extends Hogwarts{
     private int lustForPower;
     private int spellPower;
     private int apparitionDistance;
+    private int sumSkillSlytherin;
     public Slytherin(String name, int spellPower, int apparitionDistance, int cunning, int determination, int ambition, int resourcefulness, int lustForPower){
         super(name,spellPower,apparitionDistance);
         this.cunning = cunning;
@@ -14,9 +15,14 @@ public class Slytherin extends Hogwarts{
         this.ambition = ambition;
         this.resourcefulness = resourcefulness;
         this.lustForPower = lustForPower;
+        this.sumSkillSlytherin = spellPower + apparitionDistance + cunning + determination + ambition + resourcefulness + lustForPower;
     }
     public int getCunning() {
         return cunning;
+    }
+
+    public int getSumSkillSlytherin() {
+        return sumSkillSlytherin;
     }
 
     public void setCunning(int cunning) {
@@ -53,5 +59,12 @@ public class Slytherin extends Hogwarts{
 
     public void setLustForPower(int lustForPower) {
         this.lustForPower = lustForPower;
+    }
+    public static Slytherin compareSkillSlytherin(Slytherin slytherin1, Slytherin slytherin2) {
+        if (slytherin1.getSumSkillSlytherin() > slytherin2.getSumSkillSlytherin()) {
+            return slytherin1;
+        } else {
+            return slytherin2;
+        }
     }
 }

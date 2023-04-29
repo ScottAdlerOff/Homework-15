@@ -1,11 +1,8 @@
 public class Gryffindor extends Hogwarts {
 
-    private String name;
     private int nobility;
     private int honor;
     private int bravery;
-    private int spellPower;
-    private int apparitionDistance;
     private int sumSkillGryffindor;
 
     public Gryffindor(String name, int spellPower, int apparitionDistance, int nobility, int honor, int bravery) {

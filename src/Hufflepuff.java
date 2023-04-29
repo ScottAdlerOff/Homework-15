@@ -1,10 +1,7 @@
 public class Hufflepuff extends Hogwarts{
-    private String name;
     private int loyalty;
     private int diligence;
     private int honesty;
-    private int spellPower;
-    private int apparitionDistance;
     private int sumSkillHufflepuff;
     public Hufflepuff(String name, int spellPower, int apparitionDistance, int diligence, int loyalty, int honesty){
         super(name,spellPower,apparitionDistance);

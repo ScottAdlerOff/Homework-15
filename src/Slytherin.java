@@ -1,12 +1,9 @@
 public class Slytherin extends Hogwarts{
-    private String name;
     private int cunning;
     private int determination;
     private int ambition;
     private int resourcefulness;
     private int lustForPower;
-    private int spellPower;
-    private int apparitionDistance;
     private int sumSkillSlytherin;
     public Slytherin(String name, int spellPower, int apparitionDistance, int cunning, int determination, int ambition, int resourcefulness, int lustForPower){
         super(name,spellPower,apparitionDistance);

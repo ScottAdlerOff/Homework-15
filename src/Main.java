@@ -1,20 +1,8 @@
+import org.w3c.dom.ls.LSOutput;
+
 public class Main {
     public static void main(String[] args) {
 
-        Hogwarts[] students = {
-                new Hogwarts("Гарри Поттер", 85, 66),
-                new Hogwarts("Гермиона Грейнджер", 78, 72),
-                new Hogwarts("Рон Уизли", 61, 76),
-                new Hogwarts("Драко Малфой", 79, 64),
-                new Hogwarts("Грэхэм Монтегю", 61, 65),
-                new Hogwarts("Грегори Гойл", 68, 68),
-                new Hogwarts("Захария Смит", 74, 79),
-                new Hogwarts("Седрик Диггори", 82, 80),
-                new Hogwarts("Джастин Финч-Флетчли", 72, 69),
-                new Hogwarts("Чжоу Чанг", 67, 66),
-                new Hogwarts("Падма Патил", 69, 68),
-                new Hogwarts("Маркус Белби", 71, 72),
-        };
         Gryffindor[] gryffindors = {
                 new Gryffindor("Гарри Поттер", 85, 66, 84, 91, 95),
                 new Gryffindor("Гермиона Грейнджер", 78, 72, 89, 81, 81),
@@ -38,20 +26,20 @@ public class Main {
         };
 
         PrintService printService = new PrintService();
-        printService.print(students);
         printService.print(gryffindors);
         printService.print(ravenclaws);
         printService.print(slytherins);
         printService.print(hufflepuffs);
-
-    }
-
-    public static int calculateParametersGryffindor() {
-        int sum = 0;
-        for (Gryffindor gryffindor : gryffindors) {
-            sum += gryffindor.getApparitionDistance() + gryffindor.getSpellPower();
-        }
-        System.out.println(sum);
-        return sum;
+        System.out.println(" ");
+        Gryffindor moreSkilledGryffindor = Gryffindor.compareSkillGryffindor(gryffindors[1],gryffindors[0]);
+        System.out.println("Самый талантливый Гриффиндоровец - " + moreSkilledGryffindor.getName());
+        Ravenclaw moreSkilledRavenclaw = Ravenclaw.compareSkillRavenclaw(ravenclaws[1],ravenclaws[0]);
+        System.out.println("Самый талантливый Когтеврановец - " + moreSkilledRavenclaw.getName());
+        Slytherin moreSkilledSlytherin = Slytherin.compareSkillSlytherin(slytherins[1],slytherins[0]);
+        System.out.println("Самый талантливый Слизериновец - " + moreSkilledSlytherin.getName());
+        Hufflepuff moreSkilledHufflepuff = Hufflepuff.compareSkillHufflepuff(hufflepuffs[1],hufflepuffs[0]);
+        System.out.println("Самый талантливый Пуффендуец - " + moreSkilledHufflepuff.getName());
+        Hogwarts moreSkilledStudent = Hogwarts.compareSkillHogwarts(gryffindors[0], ravenclaws[0]);
+        System.out.println("Самый талантливый из Студентов - " + moreSkilledStudent.getName());
     }
 }

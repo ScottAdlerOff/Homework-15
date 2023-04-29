@@ -2,11 +2,17 @@ public class Hogwarts {
     private String name;
     private int spellPower;
     private int apparitionDistance;
+    private int sumSkillHogwarts;
 
     public Hogwarts(String name, int spellPower, int apparitionDistance){
         this.name = name;
         this.spellPower = spellPower;
         this.apparitionDistance = apparitionDistance;
+        this.sumSkillHogwarts = spellPower + apparitionDistance;
+    }
+
+    public int getSumSkillHogwarts() {
+        return sumSkillHogwarts;
     }
 
     public String getName() {
@@ -31,5 +37,12 @@ public class Hogwarts {
 
     public void setApparitionDistance(int apparitionDistance) {
         this.apparitionDistance = apparitionDistance;
+    }
+    public static Hogwarts compareSkillHogwarts(Hogwarts hogwarts1, Hogwarts hogwarts2) {
+        if (hogwarts1.getSumSkillHogwarts() > hogwarts2.getSumSkillHogwarts()) {
+            return hogwarts1;
+        } else {
+            return hogwarts2;
+        }
     }
 }

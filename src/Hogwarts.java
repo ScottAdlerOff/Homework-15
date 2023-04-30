@@ -4,7 +4,7 @@ public class Hogwarts {
     private int apparitionDistance;
     private int sumSkillHogwarts;
 
-    public Hogwarts(String name, int spellPower, int apparitionDistance){
+    public Hogwarts(String name, int spellPower, int apparitionDistance) {
         this.name = name;
         this.spellPower = spellPower;
         this.apparitionDistance = apparitionDistance;
@@ -38,9 +38,10 @@ public class Hogwarts {
     public void setApparitionDistance(int apparitionDistance) {
         this.apparitionDistance = apparitionDistance;
     }
-    public static Hogwarts compareSkillHogwarts(Hogwarts hogwarts1, Hogwarts hogwarts2) {
-        if (hogwarts1.getSumSkillHogwarts() > hogwarts2.getSumSkillHogwarts()) {
-            return hogwarts1;
+
+    public Hogwarts compareSkillHogwarts(Hogwarts hogwarts2) {
+        if (this.getSumSkillHogwarts() > hogwarts2.getSumSkillHogwarts()) {
+            return this;
         } else {
             return hogwarts2;
         }

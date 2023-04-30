@@ -1,10 +1,11 @@
-public class Hufflepuff extends Hogwarts{
+public class Hufflepuff extends Hogwarts {
     private int loyalty;
     private int diligence;
     private int honesty;
     private int sumSkillHufflepuff;
-    public Hufflepuff(String name, int spellPower, int apparitionDistance, int diligence, int loyalty, int honesty){
-        super(name,spellPower,apparitionDistance);
+
+    public Hufflepuff(String name, int spellPower, int apparitionDistance, int diligence, int loyalty, int honesty) {
+        super(name, spellPower, apparitionDistance);
         this.diligence = diligence;
         this.loyalty = loyalty;
         this.honesty = honesty;
@@ -38,9 +39,10 @@ public class Hufflepuff extends Hogwarts{
     public void setHonesty(int honesty) {
         this.honesty = honesty;
     }
-    public static Hufflepuff compareSkillHufflepuff(Hufflepuff hufflepuff1, Hufflepuff hufflepuff2) {
-        if (hufflepuff1.getSumSkillHufflepuff() > hufflepuff2.getSumSkillHufflepuff()) {
-            return hufflepuff1;
+
+    public Hufflepuff compareSkillHufflepuff(Hufflepuff hufflepuff2) {
+        if (this.getSumSkillHufflepuff() > hufflepuff2.getSumSkillHufflepuff()) {
+            return this;
         } else {
             return hufflepuff2;
         }

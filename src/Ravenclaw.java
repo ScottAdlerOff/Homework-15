@@ -38,9 +38,9 @@ public class Ravenclaw extends Hogwarts{
     public void setCreativity(int creativity) {
         this.creativity = creativity;
     }
-    public static Ravenclaw compareSkillRavenclaw(Ravenclaw ravenclaw1, Ravenclaw ravenclaw2) {
-        if (ravenclaw1.getSumSkillRavenclaw() > ravenclaw2.getSumSkillRavenclaw()) {
-            return ravenclaw1;
+    public Ravenclaw compareSkillRavenclaw(Ravenclaw ravenclaw2) {
+        if (this.getSumSkillRavenclaw() > ravenclaw2.getSumSkillRavenclaw()) {
+            return this;
         } else {
             return ravenclaw2;
         }

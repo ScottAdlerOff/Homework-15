@@ -57,9 +57,9 @@ public class Slytherin extends Hogwarts{
     public void setLustForPower(int lustForPower) {
         this.lustForPower = lustForPower;
     }
-    public static Slytherin compareSkillSlytherin(Slytherin slytherin1, Slytherin slytherin2) {
-        if (slytherin1.getSumSkillSlytherin() > slytherin2.getSumSkillSlytherin()) {
-            return slytherin1;
+    public Slytherin compareSkillSlytherin(Slytherin slytherin2) {
+        if (this.getSumSkillSlytherin() > slytherin2.getSumSkillSlytherin()) {
+            return this;
         } else {
             return slytherin2;
         }

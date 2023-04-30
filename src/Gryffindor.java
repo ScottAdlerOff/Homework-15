@@ -40,9 +40,9 @@ public class Gryffindor extends Hogwarts {
     public void setBravery(int bravery) {
         this.bravery = bravery;
     }
-    public static Gryffindor compareSkillGryffindor(Gryffindor gryffindor1, Gryffindor gryffindor2) {
-        if (gryffindor1.getSumSkillGryffindor() > gryffindor2.getSumSkillGryffindor()) {
-            return gryffindor1;
+    public Gryffindor compareSkillGryffindor(Gryffindor gryffindor2) {
+        if (this.getSumSkillGryffindor() > gryffindor2.getSumSkillGryffindor()) {
+            return this;
         } else {
             return gryffindor2;
         }

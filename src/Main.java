@@ -31,15 +31,15 @@ public class Main {
         printService.print(slytherins);
         printService.print(hufflepuffs);
         System.out.println(" ");
-        Gryffindor moreSkilledGryffindor = Gryffindor.compareSkillGryffindor(gryffindors[1],gryffindors[0]);
+        Gryffindor moreSkilledGryffindor = gryffindors[1].compareSkillGryffindor(gryffindors[0]);
         System.out.println("Самый талантливый Гриффиндоровец - " + moreSkilledGryffindor.getName());
-        Ravenclaw moreSkilledRavenclaw = Ravenclaw.compareSkillRavenclaw(ravenclaws[1],ravenclaws[0]);
+        Ravenclaw moreSkilledRavenclaw = ravenclaws[1].compareSkillRavenclaw(ravenclaws[0]);
         System.out.println("Самый талантливый Когтеврановец - " + moreSkilledRavenclaw.getName());
-        Slytherin moreSkilledSlytherin = Slytherin.compareSkillSlytherin(slytherins[1],slytherins[0]);
+        Slytherin moreSkilledSlytherin = slytherins[1].compareSkillSlytherin(slytherins[0]);
         System.out.println("Самый талантливый Слизериновец - " + moreSkilledSlytherin.getName());
-        Hufflepuff moreSkilledHufflepuff = Hufflepuff.compareSkillHufflepuff(hufflepuffs[1],hufflepuffs[0]);
+        Hufflepuff moreSkilledHufflepuff = hufflepuffs[1].compareSkillHufflepuff(hufflepuffs[0]);
         System.out.println("Самый талантливый Пуффендуец - " + moreSkilledHufflepuff.getName());
-        Hogwarts moreSkilledStudent = Hogwarts.compareSkillHogwarts(gryffindors[0], ravenclaws[0]);
+        Hogwarts moreSkilledStudent = gryffindors[1].compareSkillHogwarts(ravenclaws[0]);
         System.out.println("Самый талантливый из Студентов - " + moreSkilledStudent.getName());
     }
 }

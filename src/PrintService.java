@@ -1,16 +1,9 @@
 public class PrintService {
-    public static void print(Hogwarts[] students){
-        for (int i = 0; i < students.length; i++){
-            Hogwarts hogwarts = students[i];
-            System.out.println("Имя студента: " + hogwarts.getName() + "; Сила магии: " + hogwarts.getSpellPower() + "; Расстояние трансгрессии: " + hogwarts.getApparitionDistance());
-        }
-    }
-
-    public static void print(Gryffindor[] gryffindors){
+        public static void print(Gryffindor[] gryffindors){
         System.out.println("Факультет Гриффиндор: ");
         for (int i = 0; i < gryffindors.length; i++){
             Gryffindor gryffindor = gryffindors[i];
-            System.out.println("Имя студента: " + gryffindor.getName() + "; Сила магии: " + gryffindor.getSpellPower() + "; Расстояние трансгрессии: " + gryffindor.getApparitionDistance() + "; Уровень благородства: " + gryffindor.getNobility() + "; Уровень чести: " + gryffindor.getHonor() + "; Уровень храбрости: " + gryffindor.getHonor());
+            System.out.println("Имя студента: " + gryffindor.getName() + "; Сила магии: " + gryffindor.getSpellPower() + "; Расстояние трансгрессии: " + gryffindor.getApparitionDistance() + "; Уровень благородства: " + gryffindor.getNobility() + "; Уровень чести: " + gryffindor.getHonor() + "; Уровень храбрости: " + gryffindor.getBravery() + "; Общий уровень навыков: " + gryffindor.getSumSkillGryffindor());
         }
     }
 
@@ -35,4 +28,37 @@ public class PrintService {
             System.out.println("Имя студента: " + hufflepuff.getName() + "; Сила магии: " + hufflepuff.getSpellPower() + "; Расстояние трансгрессии: " + hufflepuff.getApparitionDistance() + "; Уровень трудолюбия: " + hufflepuff.getDiligence() + "; Уровень чести: " + hufflepuff.getHonesty() + "; Уровень верности: " + hufflepuff.getLoyalty());
         }
     }
+    public static int calculateParametersGryffindor(Gryffindor[] gryffindors) {
+        int sum = 0;
+        for (Gryffindor gryffindor : gryffindors) {
+            sum += gryffindor.getApparitionDistance() + gryffindor.getSpellPower() + gryffindor.getHonor() + gryffindor.getNobility() + gryffindor.getBravery();
+        }
+        System.out.println(sum);
+        return sum;
+    }
+    public static int calculateParametersSlytherin(Slytherin[] slytherins) {
+        int sum = 0;
+        for (Slytherin slytherin : slytherins) {
+            sum += slytherin.getApparitionDistance() + slytherin.getSpellPower() + slytherin.getLustForPower() + slytherin.getCunning() + slytherin.getResourcefulness() + slytherin.getAmbition() + slytherin.getDetermination();
+        }
+        System.out.println(sum);
+        return sum;
+    }
+    public static int calculateParametersHufflepuff(Hufflepuff[] hufflepuffs) {
+        int sum = 0;
+        for (Hufflepuff hufflepuff : hufflepuffs) {
+            sum += hufflepuff.getApparitionDistance() + hufflepuff.getSpellPower() + hufflepuff.getLoyalty() + hufflepuff.getHonesty() + hufflepuff.getDiligence();
+        }
+        System.out.println(sum);
+        return sum;
+    }
+    public static int calculateParametersRavenclaw(Ravenclaw[] ravenclaws) {
+        int sum = 0;
+        for (Ravenclaw ravenclaw : ravenclaws) {
+            sum += ravenclaw.getApparitionDistance() + ravenclaw.getSpellPower() + ravenclaw.getCreativity() + ravenclaw.getCleverness() + ravenclaw.getWisdom();
+        }
+        System.out.println(sum);
+        return sum;
+    }
+
 }
